@@ -1,0 +1,20 @@
+
+/* global Styles */
+.bgHome {
+    background-image: url('../src/assets/Main-bg-pattern.png');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+  max-inline-size: 100%;
+  margin: auto
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .wrapper {
+    max-inline-size: 1150px;
+  }
+}
