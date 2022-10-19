@@ -96,7 +96,7 @@ export default {
     return {
       postsObject: [
         {
-          title: "Introducing Colombia - Giving Voice to Every Business",
+          title: "Introducing Colombia - Diana Gabaldon",
           summary:
             "Twangs powerful low-code developer platform enables businesses to create high",
           date: "January 6, 2021",
@@ -123,7 +123,7 @@ export default {
           alt: "Description of the specific image",
         },
         {
-          title: "Outlander - Giving Voice to Every Business",
+          title: "Outlander Stories 2022 - Diana Gabaldon",
           summary:
             "Twangs incredible low-code developer platform enables businesses to create high",
           date: "February 6, 2025",
