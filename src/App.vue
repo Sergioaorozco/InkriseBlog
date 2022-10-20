@@ -17,7 +17,7 @@
 
 <style scoped>
 .navLogo {
-  background-image: url("src/assets/mainLightLogo.svg");
+  background-image: url("../src/assets/mainLightLogo.svg");
   background-repeat: no-repeat;
   height: 36px;
   width: 150px;
