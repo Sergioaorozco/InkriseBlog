@@ -40,7 +40,7 @@
           <article class="lg:flex-row gap-5 flex flex-col">
             <figure class="rounded-xl overflow-hidden">
               <img
-                :src="post.image"
+                :src="getImgUrl(post.image)"
                 class="
                   w-full
                   h-full
@@ -110,7 +110,7 @@ export default {
             "Twangs Amazing low-code developer platform enables businesses to create high",
           date: "July 6, 2023",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "require(`../src/assets/post1.svg`)",
+          image: require("../src/assets/post1.svg"),
           alt: "Description of the specific image",
         },
         {
@@ -155,6 +155,11 @@ export default {
   },
   components: {
     InkreaseSearch,
+  },
+  methods: {
+    getImgUrl: function (imagePath) {
+      return require('@/assets/' + imagePath);
+    }
   },
   computed: {
     filteredPosts() {
