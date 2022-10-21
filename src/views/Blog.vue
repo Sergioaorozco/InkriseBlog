@@ -158,8 +158,10 @@ export default {
   },
   methods: {
     getImageUrl(path) {
-      console.log(path)
-      return new URL(`../src/assets/${path}`, import.meta.url).href;
+    const url = `../images/news/${path}`;
+    const imgUrl = new URL(url, import.meta.url).href;
+    conole.log(imgUrl)
+    return imgUrl;
     }
   },
   computed: {
