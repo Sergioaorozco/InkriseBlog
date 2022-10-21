@@ -158,7 +158,7 @@ export default {
   },
   methods: {
     getImageUrl(path) {
-    const url = `../src/assets/${path}.svg`;
+    const url = `/src/assets/${path}.svg`;
     const imgUrl = new URL(url, import.meta.url).href;
     console.log(imgUrl)
     return imgUrl;
@@ -174,4 +174,3 @@ export default {
   },  
 }
 </script>
-
