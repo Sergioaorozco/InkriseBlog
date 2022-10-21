@@ -157,10 +157,9 @@ export default {
     InkreaseSearch,
   },
   methods: {
-    getImageUrl(name) {
-      console.log(URL)
-      console.log(name)
-      return new URL(`../src/assets/${name}`, import.meta.url).href;
+    getImageUrl(path) {
+      console.log(path)
+      return new URL(`../src/assets/${path}`, import.meta.url).href;
     }
   },
   computed: {
