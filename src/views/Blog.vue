@@ -40,7 +40,7 @@
           <article class="lg:flex-row gap-5 flex flex-col">
             <figure class="rounded-xl overflow-hidden">
               <img
-                :src="getImageUrl(post.image)"
+                :src="`../src/assets/${post.image}`"
                 class="
                   w-full
                   h-full
@@ -158,8 +158,8 @@ export default {
   },
   methods: {
     getImageUrl(name) {
+      console.log(name) 
       return new URL(`/assets/${name}`, import.meta.url).href;
-      console.log(name)
     }
   },
   computed: {
