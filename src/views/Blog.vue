@@ -160,7 +160,7 @@ export default {
     getImageUrl(path) {
     const url = `../images/news/${path}`;
     const imgUrl = new URL(url, import.meta.url).href;
-    conole.log(imgUrl)
+    console.log(imgUrl)
     return imgUrl;
     }
   },
