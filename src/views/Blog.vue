@@ -158,7 +158,7 @@ export default {
   },
   methods: {
     getImageUrl(name) {
-      return new URL(`(./assets/${name}`, import.meta.url).href
+      return new URL(`../src/assets/${name}`, import.meta.url).href
     }
   },
   computed: {
