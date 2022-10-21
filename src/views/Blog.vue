@@ -159,7 +159,7 @@ export default {
   methods: {
     getImageUrl(name) {
       console.log(name) 
-      return new URL(`../src/assets/${name}`, import.meta.url);
+      return new URL(`../src/assets/${name}`);
     }
   },
   computed: {
