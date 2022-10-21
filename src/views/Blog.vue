@@ -101,7 +101,7 @@ export default {
             "Twangs powerful low-code developer platform enables businesses to create high",
           date: "January 6, 2021",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post1.svg",
+          image: "post1",
           alt: "Description of the specific image",
         },
         {
@@ -110,7 +110,7 @@ export default {
             "Twangs Amazing low-code developer platform enables businesses to create high",
           date: "July 6, 2023",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post1.svg",
+          image: "post1",
           alt: "Description of the specific image",
         },
         {
@@ -119,7 +119,7 @@ export default {
             "Twangs SuperCool low-code developer platform enables businesses to create high",
           date: "March 6, 2024",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post1.svg",
+          image: "post1",
           alt: "Description of the specific image",
         },
         {
@@ -128,7 +128,7 @@ export default {
             "Twangs incredible low-code developer platform enables businesses to create high",
           date: "February 6, 2025",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post2.svg",
+          image: "post2",
           alt: "Description of the specific image",
         },
         {
@@ -137,7 +137,7 @@ export default {
             "Sprout powerful low-code developer platform enables businesses to create high",
           date: "September 6, 2016",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post2.svg",
+          image: "post2",
           alt: "Description of the specific image",
         },
         {
@@ -146,7 +146,7 @@ export default {
             "Twangs powerful low-code developer platform enables businesses to create high",
           date: "August 6, 2014",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post2.svg",
+          image: "post2",
           alt: "Description of the specific image",
         },
       ],
@@ -158,7 +158,7 @@ export default {
   },
   methods: {
     getImageUrl(path) {
-    const url = `../src/assets/${path}`;
+    const url = `../src/assets/${path}.svg`;
     const imgUrl = new URL(url, import.meta.url).href;
     console.log(imgUrl)
     return imgUrl;
