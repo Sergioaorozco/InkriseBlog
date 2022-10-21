@@ -40,7 +40,7 @@
           <article class="lg:flex-row gap-5 flex flex-col">
             <figure class="rounded-xl overflow-hidden">
               <img
-                :src="`@/assets/${post.image}`"
+                :src="getImageUrl(post.image)"
                 class="
                   w-full
                   h-full
@@ -157,8 +157,8 @@ export default {
     InkreaseSearch,
   },
   methods: {
-    getImgUrl: function (imagePath) {
-      return require('@/assets/' + imagePath);
+    getImageUrl(name) {
+      return new URL(`..src//assets/${name}`, import.meta.url).href
     }
   },
   computed: {
