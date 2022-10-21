@@ -158,7 +158,7 @@ export default {
   },
   methods: {
     getImageUrl(path) {
-    const url = `../assets/${path}`;
+    const url = `../src/assets/${path}`;
     const imgUrl = new URL(url, import.meta.url).href;
     console.log(imgUrl)
     return imgUrl;
