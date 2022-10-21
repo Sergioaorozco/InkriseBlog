@@ -128,7 +128,7 @@ export default {
             "Twangs incredible low-code developer platform enables businesses to create high",
           date: "February 6, 2025",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post1.svg",
+          image: "post2.svg",
           alt: "Description of the specific image",
         },
         {
@@ -137,7 +137,7 @@ export default {
             "Sprout powerful low-code developer platform enables businesses to create high",
           date: "September 6, 2016",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post1.svg",
+          image: "post2.svg",
           alt: "Description of the specific image",
         },
         {
@@ -146,7 +146,7 @@ export default {
             "Twangs powerful low-code developer platform enables businesses to create high",
           date: "August 6, 2014",
           author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post1.svg",
+          image: "post2.svg",
           alt: "Description of the specific image",
         },
       ],
@@ -158,8 +158,7 @@ export default {
   },
   methods: {
     getImageUrl(name) {
-      console.log(name) 
-      return new URL(`../src/assets/${name}`);
+      return new URL(`../src/assets/${name}`, import.meta.url).href;
     }
   },
   computed: {
