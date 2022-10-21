@@ -40,7 +40,7 @@
           <article class="lg:flex-row gap-5 flex flex-col">
             <figure class="rounded-xl overflow-hidden">
               <img
-                :src="gdstImageUrl(post.image)"
+                :src="getImageUrl(post.image)"
                 class="
                   w-full
                   h-full
