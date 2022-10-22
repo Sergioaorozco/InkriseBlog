@@ -3,7 +3,7 @@
     <div class="flex justify-between items-center wrapper">
       <router-link to="/"><figure class="navLogo bg-center"></figure></router-link>
       <figure class="sm:hidden">
-        <img width="40px" height="" src="../src/assets/navLightMobile.svg" alt="mobile menu navigation`)">
+        <img width="40px" src="../src/assets/navLightMobile.svg" alt="mobile menu navigation">
       </figure>
       <ul class="hidden md:flex justify-between items-center gap-7 text-xl">
         <router-link to="/"> <li class="hover:border-b-2 text-white hover:text-purple-300 hover:border-purple-300">Inicio</li></router-link>
