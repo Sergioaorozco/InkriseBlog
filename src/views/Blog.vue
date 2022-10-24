@@ -58,10 +58,10 @@
               </h2>
               <p class="elipsis-text">{{ post.summary }}</p>
               <div class="text-gray-500 mt-3 flex gap-3 items-center">
-                <img class="w-1/5" :src="(post.author.profile_image)" alt="">
+                <img class="w-1/6" :src="(post.author.profile_image)" alt="">
                 <div>
                   <p>Author: {{ post.author.first_name}} {{ post.author.last_name}}</p>
-                  <p>Updated: {{getDate(post.updated)}}</p>
+                  <p class="text-xs">Updated: {{getDate(post.updated)}}</p>
                 </div>
               </div>
               <div class="mt-5 flex items-baseline gap-2 float-right">
