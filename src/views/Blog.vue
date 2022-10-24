@@ -64,7 +64,7 @@
                   <p>Updated: {{getDate(post.updated)}}</p>
                 </div>
               </div>
-              <div class="mt-5 flex items-center gap-2">
+              <div class="mt-5 flex items-center gap-2 float-right">
                 <a class="text-purple-700 font-semibold hover:underline" href="#"
                   >Read More</a
                 >
