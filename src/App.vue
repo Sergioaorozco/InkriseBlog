@@ -8,7 +8,7 @@
       <ul class="hidden md:flex justify-between items-center gap-7 text-xl">
         <router-link to="/"> <li class="hover:border-b-2 text-white hover:text-purple-300 hover:border-purple-300">Inicio</li></router-link>
         <router-link to="/blog"> <li class="hover:border-b-2 text-white hover:text-purple-300 hover:border-purple-300">Blog</li></router-link>
-        <li><a class="py-2 px-8 bg-amber-500 duration-300 hover:bg-white hover:duration-300 rounded-full text-gray-900 font-semibold " href="https://drive.google.com/file/d/12LUbSOtitrHSOtblaEWP13lgk6ZoDbgH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+        <li><a class="py-2 px-8 bg-purple-200 duration-300 hover:bg-white hover:duration-300 rounded-full text-gray-900 font-semibold " href="https://drive.google.com/file/d/12LUbSOtitrHSOtblaEWP13lgk6ZoDbgH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
       </ul>
     </div>
   </nav>
