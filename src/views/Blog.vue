@@ -38,7 +38,7 @@
         >
           <!-- Each Article -->
           <article class="lg:flex-row gap-5 flex flex-col h-full">
-            <figure class="rounded-xl overflow-hidden w-1/2">
+            <figure class="rounded-xl overflow-hidden md:w-1/2">
               <img
                 :src="(post.featured_image)"
                 class="
@@ -52,7 +52,7 @@
                 :alt="post.alt"
               />
             </figure>
-            <div class="w-1/2">
+            <div class="md:w-1/2">
               <h2 class="font-bold text-3xl mb-4 hover:underline">
                 {{ post.title }}
               </h2>
