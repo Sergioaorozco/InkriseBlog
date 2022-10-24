@@ -37,7 +37,7 @@
           "
         >
           <!-- Each Article -->
-          <article class="lg:flex-row gap-5 flex flex-col">
+          <article class="lg:flex-row gap-5 flex flex-col h-full">
             <figure class="rounded-xl overflow-hidden w-1/2">
               <img
                 :src="(post.featured_image)"
