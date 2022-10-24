@@ -89,6 +89,8 @@
 
 <script>
 import InkreaseSearch  from '../components/InkreaseSearch.vue'
+import Butter from 'buttercms';
+const butter = Butter('c4132363d0ae8e6bdd024c99dc21de914f4b8cbd');
 
 export default {
   name: 'Blog',
@@ -160,8 +162,13 @@ export default {
     getImageUrl(path) {
     const url = `../${path}.svg`;
     const imgUrl = new URL(url, import.meta.url).href;
-    console.log(imgUrl)
     return imgUrl;
+    },
+    butterCms(){
+      butter.post.list({page: 1, page_size: 10}).then(function(response) {
+      console.log(response)
+      filteredData = response
+     })
     }
   },
   computed: {
