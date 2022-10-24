@@ -37,7 +37,7 @@
           "
         >
           <!-- Each Article -->
-          <article class="lg:flex-row gap-5 flex flex-col h-full">
+          <article class="sm:flex-row gap-5 flex flex-col h-full">
             <figure class="rounded-xl overflow-hidden sm:w-1/2">
               <img
                 :src="(post.featured_image)"
@@ -56,7 +56,7 @@
               <h2 class="font-bold text-3xl mb-4 hover:underline">
                 {{ post.title }}
               </h2>
-              <p>{{ post.summary }}</p>
+              <p class="elipsis-text">{{ post.summary }}</p>
               <div class="text-gray-500 mt-3 flex gap-3 items-center">
                 <img class="w-1/5" :src="(post.author.profile_image)" alt="">
                 <div>
@@ -135,3 +135,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.elipsis-text {
+  display: inline-block;
+  text-overflow: ellipsis;
+  max-height: calc(1.4em * 3);
+  overflow: hidden;
+}
+</style>
