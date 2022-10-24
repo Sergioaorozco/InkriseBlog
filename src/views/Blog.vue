@@ -64,7 +64,7 @@
                   <p>Updated: {{getDate(post.updated)}}</p>
                 </div>
               </div>
-              <div class="mt-5 flex items-center gap-2 float-right">
+              <div class="mt-5 flex items-baseline gap-2 float-right">
                 <a class="text-purple-700 font-semibold hover:underline" href="#"
                   >Read More</a
                 >
@@ -138,9 +138,15 @@ export default {
 
 <style scoped>
 .elipsis-text {
+  width: 100%;
   display: inline-block;
-  text-overflow: ellipsis;
   max-height: calc(1.4em * 3);
   overflow: hidden;
+}
+
+.elipsis-text:after {
+  content:"...";
+  bottom: 0;
+  right: 0;
 }
 </style>
