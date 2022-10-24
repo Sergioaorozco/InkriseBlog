@@ -52,7 +52,7 @@
                 :alt="post.alt"
               />
             </figure>
-            <div>
+            <div class="w-1/2">
               <h2 class="font-bold text-3xl mb-4 hover:underline">
                 {{ post.title }}
               </h2>
