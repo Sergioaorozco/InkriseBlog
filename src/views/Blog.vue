@@ -38,9 +38,9 @@
         >
           <!-- Each Article -->
           <article class="lg:flex-row gap-5 flex flex-col">
-            <figure class="rounded-xl overflow-hidden">
+            <figure class="rounded-xl overflow-hidden w-1/2">
               <img
-                :src="getImageUrl(post.image)"
+                :src="(post.featured_image)"
                 class="
                   w-full
                   h-full
@@ -57,9 +57,12 @@
                 {{ post.title }}
               </h2>
               <p>{{ post.summary }}</p>
-              <div class="text-gray-500 mt-3">
-                <p>{{ post.author }}</p>
-                <p>{{ post.date }}</p>
+              <div class="text-gray-500 mt-3 flex gap-3 items-center">
+                <img class="w-1/5" :src="(post.author.profile_image)" alt="">
+                <div>
+                  <p>Author: {{ post.author.first_name}} {{ post.author.last_name}}</p>
+                  <p>Updated: {{getDate(post.updated)}}</p>
+                </div>
               </div>
               <div class="mt-5 flex items-center gap-2">
                 <a class="text-purple-700 font-semibold hover:underline" href="#"
@@ -92,66 +95,12 @@ import InkreaseSearch  from '../components/InkreaseSearch.vue'
 import Butter from 'buttercms';
 const butter = Butter('c4132363d0ae8e6bdd024c99dc21de914f4b8cbd');
 
+
 export default {
   name: 'Blog',
   data(){
     return {
-      postsObject: [
-        {
-          title: "Introducing Colombia - Diana Gabaldon",
-          summary:
-            "Twangs powerful low-code developer platform enables businesses to create high",
-          date: "January 6, 2021",
-          author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post1",
-          alt: "Description of the specific image",
-        },
-        {
-          title: "Travel invention - Giving Voice to Every Business",
-          summary:
-            "Twangs Amazing low-code developer platform enables businesses to create high",
-          date: "July 6, 2023",
-          author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post1",
-          alt: "Description of the specific image",
-        },
-        {
-          title: "Disney Intervention - Giving Voice to Every Business",
-          summary:
-            "Twangs SuperCool low-code developer platform enables businesses to create high",
-          date: "March 6, 2024",
-          author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post1",
-          alt: "Description of the specific image",
-        },
-        {
-          title: "Outlander Stories 2022 - Diana Gabaldon",
-          summary:
-            "Twangs incredible low-code developer platform enables businesses to create high",
-          date: "February 6, 2025",
-          author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post2",
-          alt: "Description of the specific image",
-        },
-        {
-          title: "Xperience Design - Giving Voice to Every Business",
-          summary:
-            "Sprout powerful low-code developer platform enables businesses to create high",
-          date: "September 6, 2016",
-          author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post2",
-          alt: "Description of the specific image",
-        },
-        {
-          title: "1969 - Giving Voice to Every Business",
-          summary:
-            "Twangs powerful low-code developer platform enables businesses to create high",
-          date: "August 6, 2014",
-          author: "Limor Lahiani (PhD.), Navot Volk",
-          image: "post2",
-          alt: "Description of the specific image",
-        },
-      ],
+      postsObject: [],
       filteredData: ""
     }
   },
@@ -159,16 +108,18 @@ export default {
     InkreaseSearch,
   },
   methods: {
-    getImageUrl(path) {
-    const url = `../${path}.svg`;
-    const imgUrl = new URL(url, import.meta.url).href;
-    return imgUrl;
+    getDate(dateString) {
+      const date = new Date(dateString);
+      return new Intl.DateTimeFormat('default', {dateStyle: 'short'}).format(date);
     },
-    butterCms(){
-      butter.post.list({page: 1, page_size: 10}).then(function(response) {
-      console.log(response)
-      filteredData = response
-     })
+    getPosts(){
+      butter.post.list({
+        page: 1,
+        page_size: 10,
+      }).then(res => {
+        console.log(res)
+        this.postsObject = res.data.data
+      })
     }
   },
   computed: {
@@ -178,6 +129,9 @@ export default {
       })
 
     }
-  },  
+  },
+  created() {
+    this.getPosts()
+  }
 }
 </script>
