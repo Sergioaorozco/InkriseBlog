@@ -33,7 +33,7 @@
             cursor-pointer
             rounded-xl
             hover:bg-slate-50
-            gap
+            mb-5
           "
         >
           <!-- Each Article -->
@@ -52,8 +52,9 @@
                 :alt="post.alt"
               />
             </figure>
-            <div class="sm:w-1/2">
-              <h2 class="font-bold text-3xl mb-4 hover:underline">
+            <div class="sm:w-1/2 flex flex-col justify-between">
+            <div>
+              <h2 class="font-bold text-3xl mb-2 hover:underline">
                 {{ post.title }}
               </h2>
               <p class="elipsis-text">{{ post.summary }}</p>
@@ -64,25 +65,31 @@
                   <p class="text-xs">Updated: {{getDate(post.updated)}}</p>
                 </div>
               </div>
-              <div class="mt-5 flex items-baseline gap-2 float-right">
-                <a class="text-purple-700 font-semibold hover:underline" href="#"
-                  >Read More</a
-                >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="13"
-                  height="8"
-                  viewBox="0 0 13 8"
-                  fill="none"
-                >
-                  <path
-                    d="M1 4H11M11 4L8 1M11 4L8 7"
-                    stroke="#962EFF"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                  ></path>
-                </svg>
+            </div>
+            <div>
+              <hr class="my-2">
+              <div class="mt-2">
+                <div class="flex items-baseline gap-2 self-end float-right">
+                  <a class="text-purple-700 font-semibold hover:underline" href="#"
+                    >Read More</a
+                  >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13"
+                    height="8"
+                    viewBox="0 0 13 8"
+                    fill="none"
+                  >
+                    <path
+                      d="M1 4H11M11 4L8 1M11 4L8 7"
+                      stroke="#962EFF"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    ></path>
+                  </svg>
+                </div>
               </div>
+            </div>
             </div>
           </article>
         </section>
