@@ -61,7 +61,7 @@
               <div class="text-gray-500 mt-3 flex gap-3 items-center">
                 <img class="w-1/6" :src="(post.author.profile_image)" alt="">
                 <div>
-                  <p>Author: {{ post.author.first_name}} {{ post.author.last_name}}</p>
+                  <p class="text-sm">Author: {{ post.author.first_name}} {{ post.author.last_name}}</p>
                   <p class="text-xs">Updated: {{getDate(post.updated)}}</p>
                 </div>
               </div>
