@@ -10,8 +10,7 @@
     <figure class="wrapper px-5">
       <img :src="postContent.data.featured_image"  class="rounded-3xl h-30 md:h-[400px] w-full object-cover mb-4 -mt-28 sm:-mt-40" alt="">
     </figure>
-
-      <div class="wrapper px-5" v-html="postContent.data.body"></div>
+      <div class="single-post wrapper px-5" v-html="postContent.data.body"></div>
   </div>
 </template>
 <script>
@@ -45,3 +44,12 @@ created() {
 }
 }
 </script>
+
+<style scoped>
+:deep()h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-block: 1em;
+}
+
+</style>
