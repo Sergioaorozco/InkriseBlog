@@ -26,7 +26,7 @@
         <section v-for="post in filteredPosts" :key="post.title" 
             class="lg:mx-0 border-2 py-3 px-3 cursor-pointer rounded-xl hover:bg-slate-50 mb-5">
           <!-- Each Article -->
-          <a :href="(post.url)">
+          <router-link :to="'/blog/' + post.slug">
             <article class="sm:flex-row gap-5 flex flex-col h-full">
               <figure class="rounded-xl overflow-hidden sm:w-1/2">
                 <img
@@ -82,7 +82,7 @@
               </div>
               </div>
             </article>
-          </a>
+          </router-link>
         </section>
       </div>
   </div>
