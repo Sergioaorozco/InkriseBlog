@@ -1,6 +1,6 @@
 <template>
   <div v-for="post in PostContent" :key="post.title">
-    <h1>{{post.title}}</h1>
+    <h2>{{post.title}}</h2>
 
   </div>
   
