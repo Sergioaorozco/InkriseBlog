@@ -1,6 +1,6 @@
 <template>
   <div id="blog-content">
-    <section class="bg-purple-900 bgHome pb-24 pt-8 sm:py-24 sm:pb-40 mb-9">
+    <section class="bg-purple-900 bgHome pb-24 pt-8 sm:py-12 sm:pb-40 mb-9">
       <div class="wrapper px-5">
           <!-- Breadcrumb -->
         <nav class="flex py-5 text-white" aria-label="Breadcrumb">
