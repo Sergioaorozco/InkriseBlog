@@ -22,76 +22,67 @@
         class="wrapper grid grid-cols-1 gap-y-6 px-6 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-9"
       >
         <!-- Vue Loop for different Blog Posts -->
-        <section
-          v-for="post in filteredPosts"
-          :key="post.title"
-          class="
-            lg:mx-0
-            border-2
-            py-3
-            px-3
-            cursor-pointer
-            rounded-xl
-            hover:bg-slate-50
-            mb-5
-          "
-        >
+
+        <section v-for="post in filteredPosts" :key="post.title" 
+            class="lg:mx-0 border-2 py-3 px-3 cursor-pointer rounded-xl hover:bg-slate-50 mb-5">
           <!-- Each Article -->
-          <article class="sm:flex-row gap-5 flex flex-col h-full">
-            <figure class="rounded-xl overflow-hidden sm:w-1/2">
-              <img
-                :src="(post.featured_image)"
-                class="
-                  w-full
-                  h-full
-                  object-cover
-                  hover:scale-125
-                  transition-all
-                  duration-300
-                "
-                :alt="post.alt"
-              />
-            </figure>
-            <div class="sm:w-1/2 flex flex-col justify-between">
-            <div>
-              <h2 class="font-bold text-3xl mb-2 hover:underline">
-                {{ post.title }}
-              </h2>
-              <p class="elipsis-text">{{ post.summary }}</p>
-              <div class="text-gray-500 mt-3 flex gap-3 items-center">
-                <img class="w-12" :src="(post.author.profile_image)" alt="">
-                <div>
-                  <p class="text-sm">Author: {{ post.author.first_name}} {{ post.author.last_name}}</p>
-                  <p class="text-xs">Updated: {{getDate(post.updated)}}</p>
+          <a :href="(post.url)">
+            <article class="sm:flex-row gap-5 flex flex-col h-full">
+              <figure class="rounded-xl overflow-hidden sm:w-1/2">
+                <img
+                  :src="(post.featured_image)"
+                  class="
+                    w-full
+                    h-full
+                    object-cover
+                    hover:scale-125
+                    transition-all
+                    duration-300
+                  "
+                  :alt="post.alt"
+                />
+              </figure>
+              <div class="sm:w-1/2 flex flex-col justify-between">
+              <div>
+                <h2 class="font-bold text-3xl mb-2 hover:underline">
+                  {{ post.title }}
+                </h2>
+                <p class="elipsis-text">{{ post.summary }}</p>
+                <div class="text-gray-500 mt-3 flex gap-3 items-center">
+                  <img class="w-12" :src="(post.author.profile_image)" alt="">
+                  <div>
+                    <p class="text-sm">Author: {{ post.author.first_name}} {{ post.author.last_name}}</p>
+                    <p class="text-xs">Updated: {{getDate(post.updated)}}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div>
-              <hr class="my-2">
-              <div class="mt-2">
-                <div class="flex items-baseline gap-2 self-end float-right">
-                  <a class="text-purple-700 font-semibold hover:underline" href="#"
-                    >Read More</a
-                  >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="13"
-                    height="8"
-                    viewBox="0 0 13 8"
-                    fill="none"
-                  >
-                    <path
-                      d="M1 4H11M11 4L8 1M11 4L8 7"
-                      stroke="#962EFF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    ></path>
-                  </svg>
+              <div>
+                <hr class="my-2">
+                <div class="mt-2">
+                  <div class="flex items-baseline gap-2 self-end float-right">
+                    <a class="text-purple-700 font-semibold hover:underline" :href="(post.url)"
+                      >Read More</a
+                    >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="13"
+                      height="8"
+                      viewBox="0 0 13 8"
+                      fill="none"
+                    >
+                      <path
+                        d="M1 4H11M11 4L8 1M11 4L8 7"
+                        stroke="#962EFF"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      ></path>
+                    </svg>
+                  </div>
                 </div>
               </div>
-            </div>
-            </div>
-          </article>
+              </div>
+            </article>
+          </a>
         </section>
       </div>
   </div>
