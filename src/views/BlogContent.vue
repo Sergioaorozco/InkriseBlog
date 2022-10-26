@@ -48,7 +48,6 @@ methods: {
     butter.post.retrieve(this.$route.params.slug)
     .then(res => {
       this.postContent = res.data
-      console.log(res)
     }). catch( res =>{
       console.log(res)
     })

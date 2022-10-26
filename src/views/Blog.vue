@@ -115,7 +115,6 @@ export default {
         page: 1,
         page_size: 10,
       }).then(res => {
-        console.log(res)
         this.postsObject = res.data.data
       })
     }
