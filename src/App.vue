@@ -11,7 +11,7 @@
         <li><a class="py-2 px-8 bg-purple-200 duration-300 hover:bg-white hover:duration-300 rounded-full text-gray-900 font-semibold " href="https://drive.google.com/file/d/12LUbSOtitrHSOtblaEWP13lgk6ZoDbgH/view?usp=sharing" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
       </ul>
     </div>
-    <div v-if="isMobileActive" class="z-50 fixed bottom-0 right-0 top-0 bg-white w-full h-screen list-none px-5 py-10">
+    <div v-if="isMobileActive" class="z-50 fixed bottom-0 right-0 top-0 bg-white w-full h-screen list-none px-5 py-5">
       <nav class="flex flex-col gap-10 text-center">
         <figure @click="closeMenu">
           <img class="w-10 float-right" src="../src/assets/navCloseMobile.svg" alt="mobile menu navigation">
